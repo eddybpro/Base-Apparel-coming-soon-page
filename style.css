@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --desaturated-Red: hsl(0, 36%, 70%);
+    --soft-Red: hsl(0, 93%, 68%);
+    --dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    background: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: left -10rem  top 1rem;
+    background-size: cover;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    max-width: 900px;
+    padding:  1rem;
+}
+
+main .nlogo{
+    display: none;
+}
+
+main section{
+    flex: 1;
+}
+
+main .txt{
+    padding: 2rem 2.5rem;
+}
+
+main .txt .logo{
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+main .txt .title{
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    letter-spacing: .5rem;
+    margin: .5rem 0 1rem;
+}
+
+main .txt .title .f-span{
+    display: block;
+    color: var(--desaturated-Red);
+    font-weight: 200;
+    padding-bottom: .5rem;
+}
+
+main .txt .title .s-span{
+    display: block;
+    padding-top: .5rem;
+}
+
+main .txt .para{
+    color: var(--desaturated-Red);
+    line-height: 1.25rem;
+}
+
+main .txt form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    gap: .5rem;
+}
+
+main .txt input{
+    display: block;
+    border: 1px solid var(--dark-Grayish-Red);
+    outline: none;
+    padding: .5rem 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    width: 74%;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: transparent;
+}
+
+main .txt input::placeholder{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+main .txt .error{
+    display: block;
+    transform: translateX(-4rem);
+}
+
+main .txt .none{
+    display: none;
+}
+
+main .txt .btn{
+    display: block;
+    width: 80px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    outline: none;
+    padding: .4rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 5px 2px 15px var(--desaturated-Red);
+    transform: translateX(-4rem);
+}
+
+main .txt .txt-error{
+    color: var(--soft-Red);
+    font-size: .75rem;
+    margin-left:  1rem;
+    margin-top: .5rem;
+}
+
+main .img-container{
+    width: 400px;
+    height: 500px;
+    background: url('images/hero-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer a{
+    color: var(--soft-Red);
+    text-decoration: none;
+}
+
+@media screen and (max-width:700px) {
+    body{
+        display: block;
+    }
+
+    main{
+        display: block;
+        padding:  .5rem;
+    }
+
+    main .nlogo{
+        display: block;
+        margin: 1rem;
+        margin-bottom: 1.5rem;
+        width: 100px;
+        cursor: pointer;
+    }
+
+    main .txt{
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    main .txt form{
+        padding-left: 2rem;
+    }
+
+    main .txt .txt-error{
+        text-align: left;
+    }
+
+    main .img-container{
+        background-image: url('images/hero-mobile.jpg');
+        width: 100%;
+        height: 300px;
+    }
+
+    main .txt .logo{
+        display: none;
+    }
+
+    footer{
+        margin: 1rem;
+    }
+}
